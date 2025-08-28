@@ -9,10 +9,11 @@
   --color-orange: #e8822d;
   --color-dark-brown: #8a3324;
   --color-golden: #b9a155;
+  --breakpoint-xxs: 350px;
 }
 @layer components {
   .bg-body {
-    @apply bg-[linear-gradient(rgba(128,24,24,0.9),rgba(128,24,24,0.9)),url('/images/bg-layer.png')] bg-center bg-cover  bg-no-repeat;
+    @apply bg-[linear-gradient(rgba(128,24,24,0.9),rgba(128,24,24,0.9)),url('/images/bg-layer.png')] bg-left bg-cover  bg-no-repeat;
   }
 }
 @utility container {
