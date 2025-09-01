@@ -9,7 +9,7 @@ export default function EventCard({ type }) {
         height={100}
         alt="curve-card"
         className={`w-full h-auto  ${
-          type === "curve" ? "rounded-tl-[10rem] rounded-br-[10rem]" : ""
+          type === "curve" ? "rounded-tl-[50%] rounded-br-[50%]" : ""
         }`}
       />
       <div className="text-center mt-4">

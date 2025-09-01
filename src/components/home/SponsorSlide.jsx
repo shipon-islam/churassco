@@ -25,12 +25,12 @@ const clientLogos = [
 ];
 export default function SponsorSlide() {
   return (
-    <section className="">
-      <div className="text-center mt-14 w-[90%] mx-auto">
-        <h2 className="font-bernier lowercase text-2xl leading-5">
+    <section className="mt-10 lg:mt-32 ">
+      <div className="text-center mt-14 w-[90%] lg:w-[60%] xl:w-[50%] mx-auto">
+        <h2 className="font-bernier lowercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl ">
           DEDICATED TO THE ART & SCIENCE OF CONTEMPORARY CUISINE
         </h2>
-        <h4 className="font-monthoers text-xl mt-6 text-orange">
+        <h4 className="font-monthoers text-xl mt-6 sm:text-2xl md:text-3xl lg:text-4xl text-orange">
           for modern restaurateurs
         </h4>
       </div>
@@ -47,9 +47,9 @@ export default function SponsorSlide() {
               <li key={logos.id}>
                 <Image
                   src={logos.logo}
-                  width={453}
+                  width={853}
                   height={100}
-                  className={`h-full w-[453px]  object-cover  rounded-md px-4 py-2 `}
+                  className={`h-full w-[753px]  object-cover  rounded-md px-4 py-2 `}
                   alt="service-partner"
                 />
               </li>

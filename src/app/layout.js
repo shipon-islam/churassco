@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import "swiper/css";
 import "./fonts.css";
 import "./globals.css";
 
