@@ -1,5 +1,5 @@
 "use client";
-import Pikaday from "pikaday";
+
 import "pikaday/css/pikaday.css";
 import { useEffect, useRef } from "react";
 
@@ -7,16 +7,21 @@ const DatePicker = ({ value, onChange }) => {
   const inputRef = useRef(null);
 
   useEffect(() => {
-    const picker = new Pikaday({
-      field: inputRef.current,
-      format: "YYYY-MM-DD",
-      onSelect: (date) => {
-        onChange(date.toISOString().split("T")[0]); // Pass selected date
-      },
-    });
+    let picker;
+
+    (async () => {
+      const Pikaday = (await import("pikaday")).default; // load dynamically
+      picker = new Pikaday({
+        field: inputRef.current,
+        format: "YYYY-MM-DD",
+        onSelect: (date) => {
+          onChange(date.toISOString().split("T")[0]);
+        },
+      });
+    })();
 
     return () => {
-      picker.destroy(); // Cleanup on unmount
+      if (picker) picker.destroy();
     };
   }, [onChange]);
 
