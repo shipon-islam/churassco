@@ -5,7 +5,7 @@ import Image from "next/image";
 import TransparentButton from "../TransparentButton";
 export default function Memories() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative z-[2]">
       <div className="container">
         <div className="w-fit mx-auto text-center pt-10 lg:pt-20">
           <Image

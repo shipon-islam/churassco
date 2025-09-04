@@ -22,13 +22,29 @@ export default function Home() {
           </div>
         </div>
       </Hero>
-      <section className="bg-body">
+      <section className="bg-body relative">
         <Memories />
         <SponsorSlide />
+        <div className="hidden md:block w-[1px] h-[1000px] lg:h-[1500px] xl:h-[1900px] bg-white/20 absolute z-[1] left-[35%] top-[15%] xl:top-[12%] overflow-hidden ">
+          <div className="relative h-full">
+            <span className="w-[1px] h-20 inline-block rounded-10  bg-white/60 z-10 absolute animate-move"></span>
+          </div>
+        </div>
+        <div className="hidden md:block w-[1px] h-[1000px] lg:h-[1500px] xl:h-[1900px] bg-white/20 absolute z-[1] right-[35%] top-[15%] xl:top-[12%] overflow-hidden">
+          <div className="relative h-full">
+            <span className="w-[1px] h-20 inline-block rounded-10  bg-white/60 z-10 absolute animate-move2"></span>
+          </div>
+        </div>
+      </section>
+      <section className="bg-body">
         <UpComingEvents />
         <VideoBanner />
+      </section>
+      <section className="bg-body">
         <ServiceSlider />
         <BusinessLayout />
+      </section>
+      <section className="bg-body">
         <BookTable />
         <ClientReviews />
       </section>

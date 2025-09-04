@@ -2,7 +2,7 @@ import EventCard from "../EventCard";
 
 export default function UpComingEvents() {
   return (
-    <section className="container my-10 md:my-16 lg:my-20 w-[85%] md:w-full">
+    <div className="container py-10 md:py-16 lg:py-20 w-[85%] md:w-full">
       <div className="text-center max-w-[700px] mx-auto">
         <h5 className="font-monthoers text-2xl md:text-3xl lg:text-4xl text-orange">
           UPCOMING EVENTS
@@ -23,6 +23,6 @@ export default function UpComingEvents() {
 
         <EventCard type="curve" />
       </div>
-    </section>
+    </div>
   );
 }

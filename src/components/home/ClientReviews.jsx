@@ -43,8 +43,8 @@ export default function ClientReviews() {
         {servicesApi?.map((item) => {
           return (
             <SwiperSlide key={item.id}>
-              <div className="grid grid-cols-2 bg-dark-brown min-h-[503px]">
-                <div className="bg-black grid place-items-center relative ">
+              <div className="grid md:grid-cols-2 bg-dark-brown md:min-h-[503px]">
+                <div className="bg-black hidden md:grid place-items-center relative ">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -54,7 +54,7 @@ export default function ClientReviews() {
                     Our gest say <br /> about us
                   </p>
                 </div>
-                <div className="w-4/5 p-14">
+                <div className="md:w-4/5 p-14 text-center md:text-left">
                   <h2 className="lowercase text-4xl font-bernier text-orange">
                     {item.title}
                   </h2>

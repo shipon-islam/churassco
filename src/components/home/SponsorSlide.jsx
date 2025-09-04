@@ -25,7 +25,7 @@ const clientLogos = [
 ];
 export default function SponsorSlide() {
   return (
-    <section className="mt-10 lg:mt-32 ">
+    <div className="mt-10 lg:mt-32 ">
       <div className="text-center mt-14 w-[90%] lg:w-[60%] xl:w-[50%] mx-auto">
         <h2 className="font-bernier lowercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl ">
           DEDICATED TO THE ART & SCIENCE OF CONTEMPORARY CUISINE
@@ -57,6 +57,6 @@ export default function SponsorSlide() {
           </ul>
         </Marquee>
       </div>
-    </section>
+    </div>
   );
 }

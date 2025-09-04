@@ -45,10 +45,12 @@ export default function ServiceSlider() {
               <div className="grid md:grid-cols-[1fr_2fr] md:bg-dark-brown">
                 <div className="">
                   <div className="bg-dark-brown md:w-4/5 p-8 sm:p-12 md:p-14">
-                    <h2 className="lowercase text-4xl font-bernier">
+                    <h2 className="lowercase text-4xl font-bernier text-center md:text-left">
                       {item.title}
                     </h2>
-                    <p className="mt-9">{item.description}</p>
+                    <p className="mt-9 text-center md:text-left">
+                      {item.description}
+                    </p>
                   </div>
 
                   <TransparentButton

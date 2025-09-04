@@ -37,8 +37,8 @@ const businessApi = [
 ];
 export default function BusinessLayout() {
   return (
-    <div className="container mt-8">
-      <div className="font-monthoers text-5xl text-center mb-14 -rotate-6 text-orange">
+    <div className="container mt-12 md:mt-8">
+      <div className="font-monthoers text-lg md:text-5xl text-center mb-14 -rotate-6 text-orange">
         <h5>Every layout your </h5>
         <h4 className="pl-20">business may need</h4>
       </div>
