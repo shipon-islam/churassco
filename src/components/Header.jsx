@@ -35,10 +35,13 @@ export default function Header() {
       <nav className="relative hidden lg:block ">
         <div className="relative bg-brown py-2 ">
           <div className="container">
-            <div>
+            <Link href="/">
               <Image src={spoonLogo} alt="spoon-logo" width={63} height={62} />
-            </div>
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            </Link>
+            <Link
+              href="/"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 block"
+            >
               <Image
                 src={churasscoLogo}
                 alt="Logo"
@@ -46,7 +49,7 @@ export default function Header() {
                 height={94}
                 className="w-full h-full max-w-[300px] max-h-[94px]"
               />
-            </div>
+            </Link>
           </div>
         </div>
         <div className="flex justify-between items-center container">
@@ -87,7 +90,11 @@ export default function Header() {
                           height={198}
                           className="md:w-[100px] md:h-[100px] lg:w-[150px] lg:h-[150px] w-[198px] h-[198px] object-cover mb-2 rounded-full border-4 border-orange"
                         />
-                        <Link className="hover:text-gray-300" href={item.href}>
+                        <Link
+                          onClick={() => handleToggle(link.id)}
+                          className="hover:text-gray-300"
+                          href={item.href}
+                        >
                           {item.name}
                         </Link>
                       </li>

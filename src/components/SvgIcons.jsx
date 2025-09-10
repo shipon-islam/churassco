@@ -90,3 +90,30 @@ export const OrangeRectIcon = ({ className }) => (
     />
   </svg>
 );
+export const OrangeRectSkewIcon = ({ className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="13"
+    height="22"
+    fill="none"
+    viewBox="0 0 13 22"
+    className={className}
+  >
+    <g clipPath="url(#a)">
+      <g clipPath="url(#b)">
+        <path
+          fill="#E8822D"
+          d="m6.501 20.034 5.284-8.949-.086-.108.072-.084-5.27-8.927-5.316 9 .01.015-.021.034zm0 1.966L.008 11.006H0L.004 11 0 10.994h.007L6.502 0l6.491 10.994H13l-.005.006.005.006h-.007z"
+        ></path>
+      </g>
+    </g>
+    <defs>
+      <clipPath id="a">
+        <path fill="#fff" d="M0 0h12.98v21.98H0z"></path>
+      </clipPath>
+      <clipPath id="b">
+        <path fill="#fff" d="M0 0h13v22H0z"></path>
+      </clipPath>
+    </defs>
+  </svg>
+);

@@ -33,7 +33,12 @@ export const HeaderLinksMobile = [
       },
     ],
   },
-  { id: 3, name: "Chef's Special", href: "/chef-special", isDropdown: false },
+  {
+    id: 3,
+    name: "Chef's Special",
+    href: "/chef-special",
+    isDropdown: false,
+  },
   { id: 4, name: "Book A Table", href: "/book-table", isDropdown: false },
   { id: 5, name: "About Us", href: "/about-us", isDropdown: false },
 ];
@@ -78,6 +83,12 @@ export const HeaderLinks = [
   },
 
   { id: 4, name: "Book A Table", href: "/book-table", isDropdown: false },
-  { id: 3, name: "Chef's Special", href: "/chef-special", isDropdown: false },
+  {
+    id: 3,
+    name: "Chef's Special",
+    href: "/chef-special",
+    isDropdown: false,
+  },
   { id: 5, name: "ONLINE ORDER", href: "/online-order", isDropdown: false },
+  { id: 6, name: "about us", href: "/about-us", isDropdown: false },
 ];
