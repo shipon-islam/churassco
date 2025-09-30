@@ -1,31 +1,6 @@
 {
   "version": 4,
   "routes": {
-    "/_not-found": {
-      "initialStatus": 404,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/_not-found",
-      "dataRoute": "/_not-found.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/favicon.ico": {
       "initialHeaders": {
         "cache-control": "public, max-age=0, must-revalidate",
@@ -55,7 +30,8 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/menu/salad-and-kebab": {
+    "/_not-found": {
+      "initialStatus": 404,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -68,80 +44,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/menu/salad-and-kebab",
-      "dataRoute": "/menu/salad-and-kebab.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/menu/bread-and-dessert": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/menu/bread-and-dessert",
-      "dataRoute": "/menu/bread-and-dessert.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/about-us": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/about-us",
-      "dataRoute": "/about-us.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/menu/noodlles-and-pasta": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/menu/noodlles-and-pasta",
-      "dataRoute": "/menu/noodlles-and-pasta.rsc",
+      "srcRoute": "/_not-found",
+      "dataRoute": "/_not-found.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -175,7 +79,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/menu/beverages": {
+    "/menu/fish-and-platters": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -188,8 +92,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/menu/beverages",
-      "dataRoute": "/menu/beverages.rsc",
+      "srcRoute": "/menu/fish-and-platters",
+      "dataRoute": "/menu/fish-and-platters.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -223,7 +127,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/menu/fish-and-platters": {
+    "/menu/bread-and-dessert": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -236,8 +140,104 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/menu/fish-and-platters",
-      "dataRoute": "/menu/fish-and-platters.rsc",
+      "srcRoute": "/menu/bread-and-dessert",
+      "dataRoute": "/menu/bread-and-dessert.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/menu/beverages": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/menu/beverages",
+      "dataRoute": "/menu/beverages.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/about-us": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/about-us",
+      "dataRoute": "/about-us.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/menu/salad-and-kebab": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/menu/salad-and-kebab",
+      "dataRoute": "/menu/salad-and-kebab.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/menu/noodlles-and-pasta": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/menu/noodlles-and-pasta",
+      "dataRoute": "/menu/noodlles-and-pasta.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -251,8 +251,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "51e60c561c00c64f85918541e95405bb",
-    "previewModeSigningKey": "bc2f52210e1b92fac65d4a7f9121e4941414086ca254e176d1583f8c44a0b2fe",
-    "previewModeEncryptionKey": "7ec8c5684d6a33eef02ce218b68f99d5f2094eacfa5b7c137913ad79cbdfe403"
+    "previewModeId": "d56b65a73b91f01d59b084b35f9af8de",
+    "previewModeSigningKey": "3e4f7c28dcc9ea512b9843468be677cb6889ead207156835a1d43ec22c4bd3d7",
+    "previewModeEncryptionKey": "5902a47d660d26ae90c19dd42b55b381c9d099ba285ad645a2527c65dee7f48a"
   }
 }
