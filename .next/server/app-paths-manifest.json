@@ -1,0 +1,13 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about-us/page": "app/about-us/page.js",
+  "/book-table/page": "app/book-table/page.js",
+  "/chef/[slug]/page": "app/chef/[slug]/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/menu/beverages/page": "app/menu/beverages/page.js",
+  "/menu/bread-and-dessert/page": "app/menu/bread-and-dessert/page.js",
+  "/menu/fish-and-platters/page": "app/menu/fish-and-platters/page.js",
+  "/menu/noodlles-and-pasta/page": "app/menu/noodlles-and-pasta/page.js",
+  "/menu/salad-and-kebab/page": "app/menu/salad-and-kebab/page.js",
+  "/page": "app/page.js"
+}

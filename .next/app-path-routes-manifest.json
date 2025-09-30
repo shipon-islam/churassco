@@ -1,0 +1,13 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/about-us/page": "/about-us",
+  "/book-table/page": "/book-table",
+  "/chef/[slug]/page": "/chef/[slug]",
+  "/favicon.ico/route": "/favicon.ico",
+  "/menu/beverages/page": "/menu/beverages",
+  "/menu/bread-and-dessert/page": "/menu/bread-and-dessert",
+  "/menu/fish-and-platters/page": "/menu/fish-and-platters",
+  "/menu/noodlles-and-pasta/page": "/menu/noodlles-and-pasta",
+  "/menu/salad-and-kebab/page": "/menu/salad-and-kebab",
+  "/page": "/"
+}
