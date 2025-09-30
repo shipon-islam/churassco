@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-bernier: "bernier", sans-serif;
+  --font-monthoers: "monthoers", monospace;
+  --font-helvetica: "helvetica", sans-serif;
+  --font-island: "island", cursive;
+  --color-brown: #801818;
+  --color-orange: #e8822d;
+  --color-dark-brown: #8a3324;
+  --color-golden: #b9a155;
+  --breakpoint-xxs: 350px;
+}
+@layer components {
+  .bg-body {
+    @apply bg-[linear-gradient(rgba(128,24,24,0.9),rgba(128,24,24,0.9)),url('/images/bg-layer.png')] bg-left bg-cover  bg-no-repeat;
+  }
+}
+@utility container {
+  @apply mx-auto max-w-none 2xl:max-w-[1440px] px-4 md:!px-10 lg:px-8;
+}
+@custom-variant hover (&:hover);
+
+.animate-move {
+  animation: move 2s linear infinite;
+}
+@keyframes move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(1900px);
+  }
+}
+.animate-move2 {
+  animation: move2 2s linear infinite;
+}
+@keyframes move2 {
+  from {
+    transform: translateY(1900px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
