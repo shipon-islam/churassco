@@ -62,6 +62,7 @@ export default function Header() {
               <li key={link.id}>
                 <div className="flex items-center gap-2 uppercase ">
                   <MenuRectIcon />
+
                   {link?.dropdownItems?.length > 0 ? (
                     <button
                       onClick={() => handleToggle(link.id)}
@@ -136,7 +137,14 @@ export default function Header() {
           {navLinksMobile.map((link) => (
             <li key={link.id}>
               <div className="flex items-center justify-between gap-2 uppercase  font-medium text-3xl">
-                {link.isDropdown ? <DownArrowIcon /> : <LeftArrowIcon />}
+                <div
+                  className={
+                    link?.dropdownItems?.length > 0 ? "visible" : "invisible"
+                  }
+                >
+                  {link.isDropdown ? <DownArrowIcon /> : <LeftArrowIcon />}
+                </div>
+
                 {link?.dropdownItems?.length > 0 ? (
                   <button
                     onClick={() => handleToggleMobile(link.id)}

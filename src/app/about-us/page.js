@@ -1,7 +1,10 @@
 import homeBanner from "@/assets/banners/home-banner.jpg";
 import OurFood from "@/components/about/OurFood";
 import OurGoal from "@/components/about/OurGoal";
+import OurGoalLeft from "@/components/about/OurGoalLeft";
 import Hero from "@/components/Hero";
+import UpComingEvents from "@/components/home/UpComingEvents";
+import Image from "next/image";
 export default function AboutUs() {
   return (
     <main>
@@ -14,6 +17,17 @@ export default function AboutUs() {
       </Hero>
       <OurGoal />
       <OurFood />
+      <OurGoalLeft />
+      <UpComingEvents className="bg-body" />
+      <div>
+        <Image
+          src="/images/menu/products/cheese.jpg"
+          alt="banner"
+          width={2500}
+          height={550}
+          className="max-h-[544px] object-cover"
+        />
+      </div>
     </main>
   );
 }
