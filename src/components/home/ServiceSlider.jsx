@@ -42,9 +42,9 @@ export default function ServiceSlider() {
         {servicesApi?.map((item) => {
           return (
             <SwiperSlide style={{ height: "100%" }} key={item.id}>
-              <div className="grid md:grid-cols-[1fr_2fr] md:bg-dark-brown">
+              <div className="grid  md:grid-cols-[1fr_1.1fr] xl:grid-cols-[1fr_2fr] md:bg-dark-brown">
                 <div className="">
-                  <div className="bg-dark-brown md:w-4/5 p-8 sm:p-12 md:p-14">
+                  <div className="bg-dark-brown lg:w-4/5 p-8 sm:p-12 md:p-8 lg:p-14">
                     <h2 className="lowercase text-4xl font-bernier text-center md:text-left">
                       {item.title}
                     </h2>
@@ -62,7 +62,7 @@ export default function ServiceSlider() {
                   <Image
                     src={item.image}
                     alt={item.title}
-                    className="w-full max-h-[701px] object-cover"
+                    className="w-full h-full max-h-[701px] object-cover"
                   />
                 </div>
               </div>

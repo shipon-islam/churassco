@@ -18,7 +18,11 @@ export default function Home() {
             good time great taste
           </h1>
           <div className="mt-5 lg:hidden">
-            <ButtonWithBorder name="Book a table" />
+            <ButtonWithBorder
+              name="Book a table"
+              link={true}
+              href="/book-table"
+            />
           </div>
         </div>
       </Hero>

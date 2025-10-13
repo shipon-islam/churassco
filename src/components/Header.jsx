@@ -108,7 +108,11 @@ export default function Header() {
               </li>
             ))}
           </ul>
-          <ButtonWithBorder name="Book a table" />
+          <ButtonWithBorder
+            name="Book a table"
+            link={true}
+            href="/book-table"
+          />
         </div>
       </nav>
       {/* mobile version */}

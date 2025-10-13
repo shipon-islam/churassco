@@ -48,9 +48,9 @@ export default function ClientReviews() {
                   <Image
                     src={item.image}
                     alt={item.title}
-                    className="max-w-[435px] max-h-[489px] object-contain"
+                    className="w-full h-full max-w-[435px] max-h-[489px] object-contain"
                   />
-                  <p className="absolute bottom-20 right-14 text-orange font-monthoers text-4xl -rotate-12 text-center">
+                  <p className="absolute bottom-24 lg:bottom-20 right-14 text-orange font-monthoers text-2xl md:text-3xl lg:text-4xl -rotate-12 text-center">
                     Our gest say <br /> about us
                   </p>
                 </div>
@@ -58,7 +58,7 @@ export default function ClientReviews() {
                   <h2 className="lowercase text-4xl font-bernier text-orange">
                     {item.title}
                   </h2>
-                  <p className="mt-9 mb-5">{item.description}</p>
+                  <p className="mt-7 md:mt-9 mb-5">{item.description}</p>
                   <p>
                     <span className="text-orange pr-2">/</span>
                     {item.client}
