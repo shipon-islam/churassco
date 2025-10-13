@@ -8,11 +8,11 @@ export default function BookTable() {
   return (
     <div className="bg-body">
       <div className="container py-20">
-        <h1 className="text-orange font-monthoers uppercase text-7xl text-center pb-8">
+        <h1 className="text-orange font-monthoers uppercase text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center pb-8">
           book a table
         </h1>
 
-        <form action="#" className="grid grid-cols-4 gap-8 items-end">
+        <form action="#" className="grid sm:grid-cols-4 gap-8 items-end">
           <select className="border-b border-white/40  bg-transparent py-4 focus:outline-none">
             <option className="text-black" value="1">
               1 person
@@ -46,7 +46,10 @@ export default function BookTable() {
               03:00 pm
             </option>
           </select>
-          <TransparentButton name="Book now" className="w-fit mt-8" />
+          <TransparentButton
+            name="Book now"
+            className="w-fit ml-auto sm:mr-auto mt-8"
+          />
         </form>
       </div>
     </div>
