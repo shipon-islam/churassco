@@ -1,4 +1,8 @@
 import homeBanner from "@/assets/banners/home-banner.jpg";
+import chickenBotiKebab from "@/assets/menu/chicken-boti-kebab.webp";
+import chickenSalad from "@/assets/menu/chicken-salad.webp";
+import donerKebab from "@/assets/menu/doner-kebab.webp";
+import friedStuff from "@/assets/menu/fried-stuff.webp";
 import nakhshi from "@/assets/png/nakhshi.png";
 import Hero from "@/components/Hero";
 import StyledBorder from "@/components/StyledBorder";
@@ -54,18 +58,18 @@ function SaladAndKabab() {
               width={500}
               height={700}
               alt="product"
-              className="border-4 border-orange object-cover mx-auto md:mx-0 md:ml-auto rounded-t-full p-1 w-[80%] sm:w-[500px]"
+              className="border-4 border-orange object-cover mx-auto md:mx-0 md:ml-auto rounded-t-full p-1 w-[80%] sm:w-[500px] md:h-[500px] lg:h-[680px]"
             />
           </div>
         </div>
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 py-10 sm:py-15 md:py-20">
           <div className="">
             <Image
-              src="/images/menu/products/cheese.jpg"
+              src={chickenSalad}
               width={500}
               height={700}
               alt="product"
-              className="border-4 border-orange object-cover mx-auto md:mx-0 md:mr-auto md:rounded-tr-[50%] p-1 w-[80%] sm:w-[500px]"
+              className="border-4 border-orange object-cover mx-auto md:mx-0 md:mr-auto md:rounded-tr-[50%] p-1 w-[80%] sm:w-[500px] md:h-[500px] lg:h-[680px]"
             />
           </div>
           <div>
@@ -116,11 +120,11 @@ function SaladAndKabab() {
           </div>
           <div className="order-1 md:order-2">
             <Image
-              src="/images/menu/products/cheese.jpg"
+              src={friedStuff}
               width={500}
               height={700}
               alt="product"
-              className="border-4 border-orange object-cover mx-auto md:mx-0 md:ml-auto  md:rounded-full p-1 w-[80%] sm:w-[500px]"
+              className="border-4 border-orange object-cover mx-auto md:mx-0 md:ml-auto  md:rounded-full p-1 w-[80%] sm:w-[500px] md:h-[500px] lg:h-[680px]"
             />
           </div>
         </div>
@@ -130,11 +134,11 @@ function SaladAndKabab() {
         <div className="container grid md:grid-cols-2 gap-8 py-10 sm:py-15 md:py-20">
           <div className="">
             <Image
-              src="/images/menu/products/cheese.jpg"
+              src={chickenBotiKebab}
               width={500}
               height={700}
               alt="product"
-              className="border-4 border-orange object-cover mx-auto md:mx-0 md:mr-auto md:rounded-br-[50%] p-1 w-[80%] sm:w-[500px]"
+              className="border-4 border-orange object-cover mx-auto md:mx-0 md:mr-auto md:rounded-br-[50%] p-1 w-[80%] sm:w-[500px] md:h-[500px] lg:h-[680px]"
             />
           </div>
           <div>
@@ -186,11 +190,11 @@ function SaladAndKabab() {
           </div>
           <div className="order-1 md:order-2">
             <Image
-              src="/images/menu/products/cheese.jpg"
+              src={donerKebab}
               width={500}
               height={700}
               alt="product"
-              className="border-4 border-orange object-cover mx-auto md:ml-auto rounded-b-full md:rounded-full p-1 w-[80%] sm:w-[500px]"
+              className="border-4 border-orange object-cover mx-auto md:ml-auto rounded-b-full md:rounded-full p-1 w-[80%] sm:w-[500px] md:h-[500px] lg:h-[680px]"
             />
           </div>
         </div>

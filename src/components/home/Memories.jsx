@@ -1,5 +1,7 @@
-import curryDish from "@/assets/cards/curry.jpg";
-import resturantInside from "@/assets/cards/resturant-inside.jpg";
+import specialPlates from "@/assets/chefs-special/special-plates.webp";
+import friedRice from "@/assets/home/fried-rice.webp";
+import milkTea from "@/assets/home/milk-tea.webp";
+import saladRoti from "@/assets/home/salad-roti.webp";
 import HalfFlower from "@/assets/png/half-flower.png";
 import Image from "next/image";
 import TransparentButton from "../TransparentButton";
@@ -49,19 +51,19 @@ export default function Memories() {
           <div>
             <div className="relative w-fit ml-auto">
               <Image
-                src={resturantInside}
-                alt="Memories"
+                src={specialPlates}
+                alt="specialPlates"
                 width={577}
                 height={1002}
-                className="w-[130px] h-[280px]  xxs:w-[175px] xxs:h-[304px] sm:w-[240px] sm:h-[360px] md:h-[450px] md:w-[300px] lg:h-[650px] lg:w-[450px] xl:h-[850px] xl:w-[577px]  ml-auto border-1  border-white"
+                className="w-[130px] h-[280px]  xxs:w-[175px] xxs:h-[304px] sm:w-[240px] sm:h-[360px] md:h-[450px] md:w-[300px] lg:h-[650px] lg:w-[450px] xl:h-[850px] xl:w-[577px]  ml-auto"
               />
-              <div className="absolute bottom-1/2 left-[-44px] sm:left-[-60px] md:left-[-77px] lg:left-[-110px] xl:left-[-160px] translate-y-1/2 border-1  border-white rotate-45">
+              <div className="absolute bottom-1/2 left-[-44px] sm:left-[-60px] md:left-[-77px] lg:left-[-110px] xl:left-[-160px] translate-y-1/2 shadow-[4px_5px_16.1px_0px_#E8822D]">
                 <Image
-                  src={curryDish}
-                  alt="Memories"
-                  width={320}
-                  height={320}
-                  className="size-[85px] sm:size-[120px] md:size-[150px] lg:size-[220px] xl:size-[320px] object-cover rotate-90 "
+                  src={saladRoti}
+                  alt="saladRoti"
+                  width={310}
+                  height={330}
+                  className="h-auto w-[85px] sm:w-[120px] md:w-[150px] lg:w-[220px] xl:w-[310px] object-cover"
                 />
               </div>
             </div>
@@ -80,16 +82,16 @@ export default function Memories() {
           <div>
             <div className="relative w-fit mr-auto">
               <Image
-                src={resturantInside}
-                alt="Memories"
+                src={friedRice}
+                alt="fried-rice"
                 width={577}
                 height={1002}
-                className="w-[120px] h-[260px] xxs:w-[175px] xxs:h-[304px] sm:w-[250px] sm:h-[400px] md:h-[450px] md:w-[300px] lg:h-[650px] lg:w-[450px] xl:h-[850px] xl:w-[577px] mr-auto border-1  border-white"
+                className="w-[120px] h-[260px] xxs:w-[175px] xxs:h-[304px] sm:w-[250px] sm:h-[400px] md:h-[450px] md:w-[300px] lg:h-[650px] lg:w-[450px] xl:h-[850px] xl:w-[577px] mr-auto   "
               />
-              <div className="absolute bottom-1/2 right-[-44px] md:right-[-84px] lg:right-[-124px] translate-y-1/2 border-1  border-white ">
+              <div className="absolute bottom-1/2 right-[-44px] md:right-[-84px] lg:right-[-124px] translate-y-1/2  shadow-[-4px_-5px_16.1px_0px_#E8822D]">
                 <Image
-                  src={curryDish}
-                  alt="Memories"
+                  src={milkTea}
+                  alt="milk-tea"
                   width={105}
                   height={166}
                   className="w-[100px] h-[155px] sm:w-[140px] sm:h-[175px] md:w-[170px] md:h-[205px] lg:w-[250px] lg:h-[340px] object-cover"
@@ -97,14 +99,14 @@ export default function Memories() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="text-right">
             <h3 className="text-orange font-monthoers text-4xl xl:text-5xl hidden sm:block">
               CHEF’S SELECTION
             </h3>
             <h4 className="font-bernier lowercase text-4xl mt-7 mb-2.5 md:mt-12 md:mb-4 hidden sm:block">
               Only the Finest Cuts & Flavors
             </h4>
-            <p className=" mb-8 lg:mb-28 text-[15px] xxs:text-base leading-5  lg:leading-8 text-right lg:text-xl">
+            <p className=" mb-8 lg:mb-28 text-[15px] xxs:text-base leading-5  lg:leading-8  lg:text-xl">
               At Churrasco, we honor Brazilian barbecue, skewered meats
               flame-grilled, carved at your table, and served with fresh sides
               and warm hospitality.

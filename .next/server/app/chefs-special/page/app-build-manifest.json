@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "/chefs-special/page": [
+      "static/chunks/ff1a16fafef87110.js",
+      "static/chunks/7dd66bdf8a7e5707.js",
+      "static/chunks/e886026a66a2975e.js",
+      "static/chunks/9f65d6479e67621e.css",
+      "static/chunks/09bb28b3f67ebeea.js",
+      "static/chunks/3eba6931cad880e3.js",
+      "static/chunks/47f477e3d2ef265b.js",
+      "static/chunks/202abb9aed9e828b.js",
+      "static/chunks/0656f51f27ce398d.js",
+      "static/chunks/turbopack-10f1ad5ea44cfaeb.js"
+    ]
+  }
+}

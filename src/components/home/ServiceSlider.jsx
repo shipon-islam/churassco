@@ -1,5 +1,5 @@
 "use client";
-import serviceImage from "@/assets/cards/curry.jpg";
+import serviceImage from "@/assets/home/meat-slider.webp";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -41,28 +41,30 @@ export default function ServiceSlider() {
       >
         {servicesApi?.map((item) => {
           return (
-            <SwiperSlide style={{ height: "100%" }} key={item.id}>
-              <div className="grid  md:grid-cols-[1fr_1.1fr] xl:grid-cols-[1fr_2fr] md:bg-dark-brown">
-                <div className="">
+            <SwiperSlide key={item.id}>
+              <div className="flex flex-col gap-4 md:flex-row justify-between md:bg-dark-brown p-4">
+                <div className="flex-1">
                   <div className="bg-dark-brown lg:w-4/5 p-8 sm:p-12 md:p-8 lg:p-14">
-                    <h2 className="lowercase text-4xl font-bernier text-center md:text-left">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-monthoers text-center md:text-left text-orange">
                       {item.title}
                     </h2>
-                    <p className="mt-9 text-center md:text-left">
+                    <p className="mt-16 sm:text-lg lg:text-xl text-center md:text-left max-w-[523px]">
                       {item.description}
                     </p>
                   </div>
 
                   <TransparentButton
                     name="Read more"
-                    className="w-fit block md:ml-14 mt-10 sm:mt-15 md:mt-20 mb-14 mx-auto"
+                    className="w-fit block md:ml-14 mt-10 sm:mt-15 md:mt-20 mb-14 mx-auto border-2 border-orange hover:bg-orange"
                   />
                 </div>
-                <div>
+                <div className="border-1 border-orange flex-1 w-full max-w-[471px] mx-auto md:mx-0">
                   <Image
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full max-h-[701px] object-cover"
+                    width={471}
+                    height={670}
+                    className="w-full md:max-w-[371px] xl:max-w-[471px] h-full xl:max-h-[670px] object-cover"
                   />
                 </div>
               </div>

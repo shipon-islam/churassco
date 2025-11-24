@@ -1,4 +1,6 @@
 import homeBanner from "@/assets/banners/home-banner.jpg";
+import chickenPasta from "@/assets/menu/chicken-pasta.webp";
+import noodles from "@/assets/menu/noodles.webp";
 import Hero from "@/components/Hero";
 import { OrangeRectSkewIcon } from "@/components/SvgIcons";
 import Image from "next/image";
@@ -21,57 +23,55 @@ export default function page() {
             <div className="flex items-center gap-2 w-fit mx-auto md:mx-0 md:mr-auto">
               <OrangeRectSkewIcon />
               <h1 className="font-bernier text-2xl md:text-3xl tracking-[8px] ml-1.5">
-                Fried stuff
+                Pasta
               </h1>
               <OrangeRectSkewIcon />
             </div>
             <div className="w-fit mx-auto md:mx-0 md:mr-auto mt-5 md:mt-16">
-              <ul className="text-base sm:text-lg md:text-xl uppercase md:space-y-10 text-gray-300 ml-6 list-disc ">
-                <li>fried koel</li>
-                <li>chicken tenderloin</li>
-                <li>lemon chili wings</li>
-                <li>buffalo wings</li>
-                <li>cream cheddar wings</li>
-                <li>french fries</li>
+              <ul className="text-base sm:text-lg md:text-xl uppercase md:space-y-6 text-gray-300 ml-6 list-disc ">
+                <li>Alfredo Pasta</li>
+                <li>Pollo Penne</li>
+                <li>Beef Penne</li>
               </ul>
             </div>
           </div>
           <div className="order-1 md:order-2">
             <Image
-              src="/images/menu/products/cheese.jpg"
+              src={chickenPasta}
               width={500}
               height={700}
               alt="product"
-              className="border-4 border-orange object-cover mx-auto md:mx-0 md:ml-auto  md:rounded-full p-1 w-[80%] sm:w-[500px]"
+              className="border-4 border-orange object-cover mx-auto md:mx-0 md:ml-auto  md:rounded-[45%] p-1 w-[80%] sm:w-[500px] md:h-[500px] lg:h-[680px]"
             />
           </div>
         </div>
         <div className="container grid md:grid-cols-2 gap-8 py-10 sm:py-15 md:py-20">
           <div className="">
             <Image
-              src="/images/menu/products/cheese.jpg"
+              src={noodles}
               width={500}
               height={700}
               alt="product"
-              className="border-4 border-orange object-cover mx-auto md:mx-0 md:mr-auto md:rounded-br-[50%] p-1 w-[80%] sm:w-[500px]"
+              className="border-4 border-orange object-cover mx-auto md:mx-0 md:mr-auto md:rounded-br-[50%] p-1 w-[80%] sm:w-[500px] md:h-[500px] lg:h-[680px]"
             />
           </div>
           <div>
             <div className="flex items-center gap-2 w-fit mx-auto md:mx-0 md:mr-auto">
               <OrangeRectSkewIcon />
               <h1 className="font-bernier text-2xl md:text-3xl tracking-[8px] ml-1.5">
-                kebab
+                Noodles
               </h1>
               <OrangeRectSkewIcon />
             </div>
             <div className="mt-8 md:mt-16 w-fit mx-auto md:mx-0 md:mr-auto">
-              <ul className="text-base sm:text-lg md:text-xl uppercase space-y-5 md:space-y-10 text-gray-300 ml-6 list-disc">
-                <li>chicken boti kebab</li>
-                <li>chicken reshmi kebab</li>
-                <li>chicken kandahari kebab</li>
-                <li>chicken afghani kebab</li>
-                <li>beef adana kebab</li>
-                <li>beef bihari kebab</li>
+              <ul className="text-base sm:text-lg md:text-xl uppercase space-y-5 md:space-y-6 text-gray-300 ml-6 list-disc">
+                <li>churassco chow mein</li>
+                <li>garlic sesame chow mein</li>
+                <li>flavourful,filling, and Straight</li>
+                <li>
+                  from the grill. bowls built to satisfy your hunger and your
+                  taste
+                </li>
               </ul>
             </div>
           </div>

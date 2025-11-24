@@ -18,16 +18,7 @@
     "afterFiles": [],
     "fallback": []
   },
-  "dynamicRoutes": [
-    {
-      "page": "/chef/[slug]",
-      "regex": "^/chef/([^/]+?)(?:/)?$",
-      "routeKeys": {
-        "nxtPslug": "nxtPslug"
-      },
-      "namedRegex": "^/chef/(?<nxtPslug>[^/]+?)(?:/)?$"
-    }
-  ],
+  "dynamicRoutes": [],
   "staticRoutes": [
     {
       "page": "/",
@@ -52,6 +43,12 @@
       "regex": "^/book\\-table(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/book\\-table(?:/)?$"
+    },
+    {
+      "page": "/chefs-special",
+      "regex": "^/chefs\\-special(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/chefs\\-special(?:/)?$"
     },
     {
       "page": "/favicon.ico",

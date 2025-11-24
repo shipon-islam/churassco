@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-export default function Hero({ children, banner }) {
+export default function Hero({ children, banner, className }) {
   return (
-    <section className="relative">
+    <section className={`relative ${className}`}>
       <Image
         src={banner}
         alt="Home Banner"

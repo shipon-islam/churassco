@@ -36,25 +36,7 @@ export const HeaderLinksMobile = [
   {
     id: 3,
     name: "Chef's Special",
-    href: "/",
-    isDropdown: false,
-    dropdownItems: [
-      {
-        id: 1,
-        name: "CHEF’s Special",
-        href: "/chef/chefs-special",
-      },
-      {
-        id: 2,
-        name: "Special Platters",
-        href: "/chef/special-platters",
-      },
-      {
-        id: 3,
-        name: "Grilled Thill Platters",
-        href: "/chef/grilled-thill-platters",
-      },
-    ],
+    href: "/chefs-special",
   },
   { id: 4, name: "Book A Table", href: "/book-table", isDropdown: false },
   { id: 5, name: "About Us", href: "/about-us", isDropdown: false },
@@ -108,28 +90,7 @@ export const HeaderLinks = [
   {
     id: 3,
     name: "Chef's Special",
-    href: "/chef",
-    dropdownItems: [
-      {
-        id: 1,
-        name: "CHEF’s Special",
-        href: "/chef/chefs-special",
-        image: "/images/menu/beverages.jpg",
-      },
-      {
-        id: 2,
-        name: "Special Platters",
-        href: "/chef/special-platters",
-        image: "/images/menu/Noodlles_Pasta.jpg",
-      },
-      {
-        id: 3,
-        name: "Grilled Thill Platters",
-        href: "/chef/grilled-thill-platters",
-        image: "/images/menu/Fish_Platters.jpg",
-      },
-    ],
-    isDropdown: false,
+    href: "/chefs-special",
   },
   { id: 4, name: "Book A Table", href: "/book-table", isDropdown: false },
 

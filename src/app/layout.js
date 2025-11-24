@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import HeaderContextProvider from "@/context/HeaderContextProvider";
 import "swiper/css";
 import "./fonts.css";
 import "./globals.css";
@@ -13,9 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`bg-brown font-helvetica text-white antialiased`}>
-        <Header />
-        {children}
-        <Footer />
+        <HeaderContextProvider>
+          <Header />
+          {children}
+          <Footer />
+        </HeaderContextProvider>
       </body>
     </html>
   );

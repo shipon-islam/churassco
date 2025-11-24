@@ -2,7 +2,7 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/about-us/page": "app/about-us/page.js",
   "/book-table/page": "app/book-table/page.js",
-  "/chef/[slug]/page": "app/chef/[slug]/page.js",
+  "/chefs-special/page": "app/chefs-special/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/menu/beverages/page": "app/menu/beverages/page.js",
   "/menu/bread-and-dessert/page": "app/menu/bread-and-dessert/page.js",

@@ -1,5 +1,5 @@
 "use client";
-import serviceImage from "@/assets/cards/curry.jpg";
+import serviceImage from "@/assets/home/paper-craft.webp";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -44,11 +44,11 @@ export default function ClientReviews() {
           return (
             <SwiperSlide key={item.id}>
               <div className="grid md:grid-cols-2 bg-dark-brown md:min-h-[503px]">
-                <div className="bg-black hidden md:grid place-items-center relative ">
+                <div className="hidden md:grid place-items-center relative border-r-8 border-l-8 border-orange">
                   <Image
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full max-w-[435px] max-h-[489px] object-contain"
+                    className="w-full h-full max-w-[700px] max-h-[500px] object-cover"
                   />
                   <p className="absolute bottom-24 lg:bottom-20 right-14 text-orange font-monthoers text-2xl md:text-3xl lg:text-4xl -rotate-12 text-center">
                     Our gest say <br /> about us

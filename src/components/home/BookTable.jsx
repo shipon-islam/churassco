@@ -1,5 +1,5 @@
 "use client";
-import serviceImage from "@/assets/cards/curry.jpg";
+import insideResturaunt from "@/assets/home/inside-resturaunt.webp";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -61,11 +61,11 @@ export default function BookTable() {
         <div className="relative ">
           <div className="w-fit max-w-[180px] h-[250px] md:max-w-[400px] md:h-[627px] mx-auto md:ml-auto  my-5 md:my-0">
             <Image
-              src={serviceImage}
+              src={insideResturaunt}
               width={600}
               height={400}
               alt="table-book"
-              className="w-full h-full object-cover rounded-tl-[40%] rounded-br-[40%] "
+              className="w-full h-full object-cover rounded-tl-[40%] rounded-br-[40%] hover:rounded-bl-[40%] hover:rounded-tr-[40%] hover:rounded-tl-[0%] hover:rounded-br-[0%] transition-all duration-300"
             />
           </div>
           <div className="font-island text-lg md:text-5xl text-orange -rotate-12 absolute bottom-10 md:bottom-0 left-[60%] md:left-[5%]">

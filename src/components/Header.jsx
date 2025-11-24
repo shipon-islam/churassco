@@ -2,6 +2,7 @@
 import churasscoLogo from "@/assets/logo/churassco-logo.png";
 import spoonLogo from "@/assets/logo/spoon.png";
 import { HeaderLinks, HeaderLinksMobile } from "@/constants/header_data";
+import { UseHeader } from "@/context/HeaderContextProvider";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -16,6 +17,7 @@ export default function Header() {
   const [navLinks, setNavLinks] = useState(HeaderLinks);
   const [navLinksMobile, setNavLinksMobile] = useState(HeaderLinksMobile);
   const [isMenuShown, setIsMenuShown] = useState(false);
+  const { isShowHeader } = UseHeader();
   const handleToggle = (id) => {
     const updatedLinks = navLinks.map((link) =>
       link.id === id
@@ -54,66 +56,65 @@ export default function Header() {
             </Link>
           </div>
         </div>
-        <div className="flex justify-between items-center container">
-          <ul
-            className={`mt-2 w-full flex p-8 text-white relative container space-x-5 lg:space-x-6 `}
-          >
-            {navLinks.map((link) => (
-              <li key={link.id}>
-                <div className="flex items-center gap-2 uppercase ">
-                  <MenuRectIcon />
+        {isShowHeader && (
+          <div className="flex justify-between items-center container">
+            <ul
+              className={`mt-2 w-full flex p-8 text-white relative container space-x-5 lg:space-x-6 `}
+            >
+              {navLinks.map((link) => (
+                <li key={link.id}>
+                  <div className="flex items-center gap-2 uppercase ">
+                    <MenuRectIcon />
 
-                  {link?.dropdownItems?.length > 0 ? (
-                    <button
-                      onClick={() => handleToggle(link.id)}
-                      className="cursor-pointer uppercase border-b-1 border-transparent hover:border-white hover:text-gray-300"
-                    >
-                      {link.name}
-                    </button>
-                  ) : (
-                    <Link
-                      onClick={() => handleToggle(link.id)}
-                      className="border-b-1 border-transparent hover:border-white hover:text-gray-300"
-                      href={link.href}
-                    >
-                      {link.name}
-                    </Link>
-                  )}
-                </div>
-                {link?.isDropdown && link?.dropdownItems?.length > 0 && (
-                  <ul className="flex gap-8 container !w-full 2xl:!w-fit left-0 top-20 rsight-0 absolute  bg-dark-brown p-4 space-y-2 rounded-md">
-                    {link.dropdownItems.map((item) => (
-                      <li
-                        key={item.id}
-                        className="mt-4 flex flex-col items-center text-center xl:text-xl"
+                    {link?.dropdownItems?.length > 0 ? (
+                      <button
+                        onClick={() => handleToggle(link.id)}
+                        className="cursor-pointer uppercase border-b-1 border-transparent hover:border-white hover:text-gray-300"
                       >
-                        <Image
-                          src={item.image}
-                          alt={item.name}
-                          width={198}
-                          height={198}
-                          className="md:w-[100px] md:h-[100px] lg:w-[150px] lg:h-[150px] w-[198px] h-[198px] object-cover mb-2 rounded-full border-4 border-orange"
-                        />
-                        <Link
-                          onClick={() => handleToggle(link.id)}
-                          className="hover:text-gray-300"
-                          href={item.href}
-                        >
-                          {item.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
-          <ButtonWithBorder
-            name="Book a table"
-            link={true}
-            href="/book-table"
-          />
-        </div>
+                        {link.name}
+                      </button>
+                    ) : (
+                      <Link
+                        onClick={() => handleToggle(link.id)}
+                        className="border-b-1 border-transparent hover:border-white hover:text-gray-300"
+                        href={link.href}
+                      >
+                        {link.name}
+                      </Link>
+                    )}
+                  </div>
+                  {link?.isDropdown && link?.dropdownItems?.length > 0 && (
+                    <ul className="flex gap-8 container !w-full 2xl:!w-fit left-0 top-20 rsight-0 absolute  bg-dark-brown p-4 space-y-2 rounded-md">
+                      {link.dropdownItems.map((item) => (
+                        <li key={item.id}>
+                          <Link
+                            onClick={() => handleToggle(link.id)}
+                            className="mt-4 flex flex-col items-center text-center xl:text-xl hover:text-gray-300"
+                            href={item.href}
+                          >
+                            <Image
+                              src={item.image}
+                              alt={item.name}
+                              width={198}
+                              height={198}
+                              className="md:w-[100px] md:h-[100px] lg:w-[150px] lg:h-[150px] w-[198px] h-[198px] object-cover mb-2 rounded-full border-4 border-orange"
+                            />
+                            <span>{item.name}</span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+            <ButtonWithBorder
+              name="Book a table"
+              link={true}
+              href="/book-table"
+            />
+          </div>
+        )}
       </nav>
       {/* mobile version */}
       <nav className="relative flex items-center justify-end px-4 py-8 lg:hidden">

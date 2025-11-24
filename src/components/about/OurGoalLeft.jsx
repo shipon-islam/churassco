@@ -1,5 +1,6 @@
+import churasscoHeritage from "@/assets/about/churassco-heritage.webp";
+import churasscoMomentFrame from "@/assets/about/churassco-moment-frame.webp";
 import Image from "next/image";
-
 export default function OurGoalLeft() {
   return (
     <div className="bg-body">
@@ -48,7 +49,7 @@ export default function OurGoalLeft() {
 
             <div className="flex flex-col justify-center items-end md:justify-end h-full relative left-10 md:left-0 z-10">
               <Image
-                src="/images/menu/products/cheese.jpg"
+                src={churasscoMomentFrame}
                 width={310}
                 height={524}
                 alt="img"
@@ -62,7 +63,7 @@ export default function OurGoalLeft() {
           </div>
           <div className="relative">
             <Image
-              src="/images/menu/products/cheese.jpg"
+              src={churasscoHeritage}
               width={600}
               height={1170}
               alt="img"

@@ -1,1 +1,0 @@
-(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,20828,t=>{t.v("/_next/static/media/curry.3b4b1d24.jpg")}]);

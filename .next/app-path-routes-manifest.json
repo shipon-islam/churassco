@@ -2,7 +2,7 @@
   "/_not-found/page": "/_not-found",
   "/about-us/page": "/about-us",
   "/book-table/page": "/book-table",
-  "/chef/[slug]/page": "/chef/[slug]",
+  "/chefs-special/page": "/chefs-special",
   "/favicon.ico/route": "/favicon.ico",
   "/menu/beverages/page": "/menu/beverages",
   "/menu/bread-and-dessert/page": "/menu/bread-and-dessert",

@@ -1,4 +1,6 @@
 import homeBanner from "@/assets/banners/home-banner.jpg";
+import chickenSalad from "@/assets/menu/chicken-salad.webp";
+import desserts from "@/assets/menu/desserts.webp";
 import Hero from "@/components/Hero";
 import { OrangeRectSkewIcon } from "@/components/SvgIcons";
 import Image from "next/image";
@@ -22,24 +24,23 @@ export default function BreadAndDessert() {
             <div className="flex items-center gap-2 w-fit mx-auto md:mx-0 md:mr-auto">
               <OrangeRectSkewIcon />
               <h1 className="font-bernier text-2xl md:text-3xl tracking-[8px] ml-1.5">
-                Fried stuff
+                Desserts
               </h1>
               <OrangeRectSkewIcon />
             </div>
             <div className="w-fit mx-auto md:mx-0 md:mr-auto mt-5 md:mt-16">
-              <ul className="text-base sm:text-lg md:text-xl uppercase md:space-y-10 text-gray-300 ml-6 list-disc ">
-                <li>fried koel</li>
-                <li>chicken tenderloin</li>
-                <li>lemon chili wings</li>
-                <li>buffalo wings</li>
-                <li>cream cheddar wings</li>
-                <li>french fries</li>
+              <ul className="text-base sm:text-lg md:text-xl uppercase md:space-y-6 text-gray-300 ml-6 list-disc ">
+                <li>Red Velvet Cup Cake</li>
+                <li>Lemon Tart</li>
+                <li>Chocolate Fudge Cake</li>
+                <li>Tiramisu Cup</li>
+                <li>Brownie</li>
               </ul>
             </div>
           </div>
           <div className="order-1 md:order-2">
             <Image
-              src="/images/menu/products/cheese.jpg"
+              src={desserts}
               width={500}
               height={700}
               alt="product"
@@ -50,7 +51,7 @@ export default function BreadAndDessert() {
         <div className="container grid md:grid-cols-2 gap-8 py-10 sm:py-15 md:py-20">
           <div className="">
             <Image
-              src="/images/menu/products/cheese.jpg"
+              src={chickenSalad}
               width={500}
               height={700}
               alt="product"
@@ -61,18 +62,20 @@ export default function BreadAndDessert() {
             <div className="flex items-center gap-2 w-fit mx-auto md:mx-0 md:mr-auto">
               <OrangeRectSkewIcon />
               <h1 className="font-bernier text-2xl md:text-3xl tracking-[8px] ml-1.5">
-                kebab
+                Bread
               </h1>
               <OrangeRectSkewIcon />
             </div>
             <div className="mt-8 md:mt-16 w-fit mx-auto md:mx-0 md:mr-auto">
-              <ul className="text-base sm:text-lg md:text-xl uppercase space-y-5 md:space-y-10 text-gray-300 ml-6 list-disc">
-                <li>chicken boti kebab</li>
-                <li>chicken reshmi kebab</li>
-                <li>chicken kandahari kebab</li>
-                <li>chicken afghani kebab</li>
-                <li>beef adana kebab</li>
-                <li>beef bihari kebab</li>
+              <ul className="text-base sm:text-lg md:text-xl uppercase space-y-5 md:space-y-6 text-gray-300 ml-6 list-disc">
+                <li>Butter Naan</li>
+                <li>
+                  Rumali Roti <br />
+                  Simple, classic, and <br />
+                  irresistible <br />
+                  Breads that turn every bite <br />
+                  into comfort.
+                </li>
               </ul>
             </div>
           </div>

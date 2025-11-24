@@ -98,7 +98,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\Shipon Islam\\Desktop\\Next-Project\\churassco-vps",
+    "outputFileTracingRoot": "C:\\Users\\Shipon Islam\\Desktop\\Next-Project\\churassco",
     "experimental": {
       "useSkewCookie": false,
       "cacheLife": {
@@ -287,10 +287,10 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
     "turbopack": {
-      "root": "C:\\Users\\Shipon Islam\\Desktop\\Next-Project\\churassco-vps"
+      "root": "C:\\Users\\Shipon Islam\\Desktop\\Next-Project\\churassco"
     }
   },
-  "appDir": "C:\\Users\\Shipon Islam\\Desktop\\Next-Project\\churassco-vps",
+  "appDir": "C:\\Users\\Shipon Islam\\Desktop\\Next-Project\\churassco",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

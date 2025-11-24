@@ -1,4 +1,4 @@
-import videoBanner from "@/assets/cards/curry.jpg";
+import videoBanner from "@/assets/home/heritage-home-banner.webp";
 import Image from "next/image";
 export default function VideoBanner() {
   return (

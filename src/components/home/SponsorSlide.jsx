@@ -27,7 +27,7 @@ export default function SponsorSlide() {
   return (
     <div className="mt-10 lg:mt-32 ">
       <div className="text-center mt-14 w-[90%] lg:w-[60%] xl:w-[50%] mx-auto">
-        <h2 className="font-bernier lowercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl ">
+        <h2 className="font-monthoers  text-2xl sm:text-3xl md:text-4xl lg:text-5xl ">
           DEDICATED TO THE ART & SCIENCE OF CONTEMPORARY CUISINE
         </h2>
         <h4 className="font-monthoers text-xl mt-6 sm:text-2xl md:text-3xl lg:text-4xl text-orange">

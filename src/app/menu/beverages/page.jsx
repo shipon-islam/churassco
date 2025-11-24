@@ -1,4 +1,6 @@
 import homeBanner from "@/assets/banners/home-banner.jpg";
+import coldTea from "@/assets/menu/cold-tea.webp";
+import hotTea from "@/assets/menu/hot-tea.webp";
 import Hero from "@/components/Hero";
 import { OrangeRectSkewIcon } from "@/components/SvgIcons";
 import Image from "next/image";
@@ -21,26 +23,28 @@ export default function Beverages() {
             <div className="flex items-center gap-2 w-fit mx-auto md:mx-0">
               <OrangeRectSkewIcon />
               <h1 className="font-bernier text-2xl md:text-3xl tracking-[8px] ml-1.5">
-                Soup
+                Lemonade
               </h1>
               <OrangeRectSkewIcon />
             </div>
             <div className="md:mt-16">
-              <h2 className="text-lg sm:text-xl md:text-2xl uppercase py-6 sm:py-10 md:py-16 flex items-center gap-4 w-fit mx-auto md:mx-0">
-                <span className="size-2 bg-white inline-block"></span> Soup of
-                the day
-              </h2>
-              <ul className="text-base sm:text-lg md:text-xl uppercase md:space-y-10 text-gray-300 ml-6">
-                <li>A warm, hearty bowl crafted fresh daily</li>
-                <li>with seasonal ingredients. perfect</li>
-                <li>comfort food to start your churrasco</li>
-                <li>experiement</li>
+              <ul className="text-base sm:text-lg md:text-xl uppercase md:space-y-6 text-gray-300 ml-6 list-disc">
+                <li>Lassi</li>
+                <li>Coconut Shake</li>
+                <li>Molten Chocolat</li>
+                <li>Oreo Shake</li>
+                <li>Vanilla Milkshak</li>
+                <li>Strawberry Sha</li>
+                <li>Mango Milkshak</li>
+                <li>Chocolate Milks</li>
+                <li>Cold Coffee</li>
+                <li>Iced Tea</li>
               </ul>
             </div>
           </div>
           <div className="order-1 md:order-2">
             <Image
-              src="/images/menu/products/cheese.jpg"
+              src={coldTea}
               width={500}
               height={700}
               alt="product"
@@ -49,39 +53,29 @@ export default function Beverages() {
           </div>
         </div>
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 py-10 sm:py-15 md:py-20">
+          <div className="order-1 md:order-2">
+            <Image
+              src={hotTea}
+              width={500}
+              height={700}
+              alt="product"
+              className="border-4 border-orange object-cover mx-auto md:ml-auto rounded-tr-[40%]  p-1 w-[80%] sm:w-[500px] h-auto md:min-h-[550px] lg:min-h-[631px]"
+            />
+          </div>
           <div className="order-2 md:order-2">
             <div className="flex items-center gap-2 w-fit  mx-auto md:mx-0 md:mr-auto">
               <OrangeRectSkewIcon />
               <h1 className="font-bernier text-2xl md:text-3xl tracking-[8px] ml-1.5">
-                doner kebab
+                Beverages (Hot)
               </h1>
               <OrangeRectSkewIcon />
             </div>
             <div className="mt-2 md:mt-16 text-center md:text-left">
-              <h2 className="text-lg sm:text-xl md:text-2xl uppercase pt-6 flex items-center gap-4 mx-auto md:mx-0 md:mr-auto w-fit">
-                <span className="size-2 bg-white inline-block"></span> chicken
-                doner
-              </h2>
-              <h2 className="text-lg sm:text-xl md:text-2xl uppercase py-6 flex items-center gap-4 mx-auto md:mx-0 md:mr-auto w-fit">
-                <span className="size-2 bg-white inline-block"></span> beef
-                doner
-              </h2>
-              <ul className="text-basesm:text-lg md:text-xl uppercase md:space-y-10 text-gray-300 ml-6">
-                <li>layer of flavor wrapped to</li>
-                <li>perfection. our chicken and</li>
-                <li>beef ndoners bring the streets</li>
-                <li>of istanbul to khilgaon</li>
+              <ul className="text-base sm:text-lg md:text-xl uppercase md:space-y-6 text-gray-300 ml-6 list-disc">
+                <li>Hot Chocolate</li>
+                <li>Hot Coffee</li>
               </ul>
             </div>
-          </div>
-          <div className="order-1 md:order-2">
-            <Image
-              src="/images/menu/products/cheese.jpg"
-              width={500}
-              height={700}
-              alt="product"
-              className="border-4 border-orange object-cover mx-auto md:ml-auto rounded-b-full md:rounded-full p-1 w-[80%] sm:w-[500px]"
-            />
           </div>
         </div>
       </section>
