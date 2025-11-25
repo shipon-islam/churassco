@@ -1,6 +1,7 @@
 import homeBanner from "@/assets/banners/home-banner.jpg";
 import ButtonWithBorder from "@/components/ButtonWithBorder";
 import Hero from "@/components/Hero";
+import AudioPlayer from "@/components/home/AudioPlayer";
 import BookTable from "@/components/home/BookTable";
 import BusinessLayout from "@/components/home/BusinessLayout";
 import ClientReviews from "@/components/home/ClientReviews";
@@ -29,12 +30,12 @@ export default function Home() {
       <section className="bg-body relative">
         <Memories />
         <SponsorSlide />
-        <div className="hidden md:block w-[1px] h-[1000px] lg:h-[1500px] xl:h-[1900px] bg-white/20 absolute z-[1] left-[35%] top-[15%] xl:top-[12%] overflow-hidden ">
+        <div className="hidden md:block w-[1px] h-[1450px] lg:h-[2200px] xl:h-[2525px] bg-white/20 absolute z-[1] left-[35%] top-[0%] overflow-hidden ">
           <div className="relative h-full">
             <span className="w-[1px] h-20 inline-block rounded-10  bg-white/60 z-10 absolute animate-move"></span>
           </div>
         </div>
-        <div className="hidden md:block w-[1px] h-[1000px] lg:h-[1500px] xl:h-[1900px] bg-white/20 absolute z-[1] right-[35%] top-[15%] xl:top-[12%] overflow-hidden">
+        <div className="hidden md:block w-[1px] h-[1450px] lg:h-[2200px] xl:h-[2525px] bg-white/20 absolute z-[1] right-[35%] top-[0%] overflow-hidden">
           <div className="relative h-full">
             <span className="w-[1px] h-20 inline-block rounded-10  bg-white/60 z-10 absolute animate-move2"></span>
           </div>
@@ -52,6 +53,7 @@ export default function Home() {
         <BookTable />
         <ClientReviews />
       </section>
+      <AudioPlayer />
     </main>
   );
 }

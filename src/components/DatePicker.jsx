@@ -31,7 +31,7 @@ const DatePicker = ({ value, onChange }) => {
         ref={inputRef}
         defaultValue={value}
         placeholder="Select a date"
-        className="border-b rounded px-1 py-2 w-full focus:outline-none placeholder:text-white"
+        className="border-b border-white/40  px-1 py-2 w-full focus:outline-none placeholder:text-white focus:border-white"
       />
       <svg
         className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none"

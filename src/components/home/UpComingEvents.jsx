@@ -4,7 +4,7 @@ export default function UpComingEvents() {
   return (
     <div>
       <div className="container py-10 md:py-16 lg:py-20 w-[85%] md:w-full">
-        <div className="text-center max-w-[700px] mx-auto">
+        <div className="text-center max-w-[1020px] mx-auto">
           <h5 className="font-monthoers text-2xl md:text-3xl lg:text-4xl text-orange">
             UPCOMING EVENTS
           </h5>
@@ -22,7 +22,7 @@ export default function UpComingEvents() {
             <EventCard />
           </div>
 
-          <EventCard type="curve" />
+          <EventCard type="curve-left" />
         </div>
       </div>
     </div>

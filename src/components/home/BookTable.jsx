@@ -8,6 +8,7 @@ import TransparentButton from "../TransparentButton";
 
 export default function BookTable() {
   const [selectedDate, setSelectedDate] = useState("");
+  const [isCustom, setIsCustom] = useState(false);
   return (
     <div className="container mt-8">
       <div className="bg-dark-brown grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-5 p-5 md:p-10 lg:p-20 ">
@@ -22,18 +23,38 @@ export default function BookTable() {
             *reservations recommended
           </p>
           <form action="#" className="flex flex-col gap-8">
-            <select className="border-b border-white/40  bg-transparent py-4 focus:outline-none">
+            <input
+              placeholder="Enter number of people"
+              className={`border-b border-white/40  bg-transparent py-4 focus:outline-none focus:border-white ${
+                isCustom ? "block" : "hidden"
+              }`}
+            />
+            <select
+              onChange={(e) => {
+                if (e.target.value === "custom") {
+                  setIsCustom(true);
+                } else {
+                  setIsCustom(false);
+                }
+              }}
+              className={`border-b border-white/40  bg-transparent py-4 focus:outline-none ${
+                isCustom ? "hidden" : "block"
+              }`}
+            >
               <option className="text-black" value="1">
-                1 person
+                1 Person
               </option>
               <option className="text-black" value="2">
-                2 person
+                2 Person
               </option>
               <option className="text-black" value="3">
-                3 person
+                3 Person
               </option>
               <option className="text-black" value="4">
-                4 person
+                4 Person
+              </option>
+              <option className="text-black" value="custom">
+                Custom
               </option>
             </select>
 

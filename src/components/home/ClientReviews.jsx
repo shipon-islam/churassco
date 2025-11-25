@@ -1,7 +1,6 @@
 "use client";
 import serviceImage from "@/assets/home/paper-craft.webp";
 import Image from "next/image";
-import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 const servicesApi = [
   {
@@ -38,7 +37,7 @@ export default function ClientReviews() {
         }}
         // onSlideChange={() => console.log("slide change")}
         // onSwiper={(swiper) => console.log(swiper)}
-        modules={[Autoplay]}
+        // modules={[Autoplay]}
       >
         {servicesApi?.map((item) => {
           return (

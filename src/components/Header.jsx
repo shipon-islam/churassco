@@ -5,7 +5,7 @@ import { HeaderLinks, HeaderLinksMobile } from "@/constants/header_data";
 import { UseHeader } from "@/context/HeaderContextProvider";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ButtonWithBorder from "./ButtonWithBorder";
 import {
   DownArrowIcon,
@@ -18,6 +18,8 @@ export default function Header() {
   const [navLinksMobile, setNavLinksMobile] = useState(HeaderLinksMobile);
   const [isMenuShown, setIsMenuShown] = useState(false);
   const { isShowHeader } = UseHeader();
+  const [scrolled, setScrolled] = useState(false);
+
   const handleToggle = (id) => {
     const updatedLinks = navLinks.map((link) =>
       link.id === id
@@ -33,15 +35,37 @@ export default function Header() {
     );
     setNavLinksMobile(updatedLinks);
   };
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+
+      lastScrollY = window.scrollY;
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header className="fixed top-0 left-0 w-full  z-50">
       {/* desktop version */}
       <nav className="relative hidden lg:block ">
-        <div className="relative bg-brown py-2 ">
-          <div className="container">
-            <Link href="/">
-              <Image src={spoonLogo} alt="spoon-logo" width={63} height={62} />
-            </Link>
+        <div
+          className={`relative bg-brown  transition-transform duration-300 ease-in-out ${
+            !scrolled
+              ? "opacity-0 -translate-y-full"
+              : "opacity-100 translate-y-0 z-10"
+          }`}
+        >
+          <div className="container flex min-h-[86px] items-center px-4 relative">
             <Link
               href="/"
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 block"
@@ -51,68 +75,86 @@ export default function Header() {
                 alt="Logo"
                 width={350}
                 height={94}
-                className="w-full h-full max-w-[300px] max-h-[94px]"
+                className=" h-full w-[280px] max-h-[94px]"
               />
             </Link>
-          </div>
-        </div>
-        {isShowHeader && (
-          <div className="flex justify-between items-center container">
-            <ul
-              className={`mt-2 w-full flex p-8 text-white relative container space-x-5 lg:space-x-6 `}
-            >
-              {navLinks.map((link) => (
-                <li key={link.id}>
-                  <div className="flex items-center gap-2 uppercase ">
-                    <MenuRectIcon />
-
-                    {link?.dropdownItems?.length > 0 ? (
-                      <button
-                        onClick={() => handleToggle(link.id)}
-                        className="cursor-pointer uppercase border-b-1 border-transparent hover:border-white hover:text-gray-300"
-                      >
-                        {link.name}
-                      </button>
-                    ) : (
-                      <Link
-                        onClick={() => handleToggle(link.id)}
-                        className="border-b-1 border-transparent hover:border-white hover:text-gray-300"
-                        href={link.href}
-                      >
-                        {link.name}
-                      </Link>
-                    )}
-                  </div>
-                  {link?.isDropdown && link?.dropdownItems?.length > 0 && (
-                    <ul className="flex gap-8 container !w-full 2xl:!w-fit left-0 top-20 rsight-0 absolute  bg-dark-brown p-4 space-y-2 rounded-md">
-                      {link.dropdownItems.map((item) => (
-                        <li key={item.id}>
-                          <Link
-                            onClick={() => handleToggle(link.id)}
-                            className="mt-4 flex flex-col items-center text-center xl:text-xl hover:text-gray-300"
-                            href={item.href}
-                          >
-                            <Image
-                              src={item.image}
-                              alt={item.name}
-                              width={198}
-                              height={198}
-                              className="md:w-[100px] md:h-[100px] lg:w-[150px] lg:h-[150px] w-[198px] h-[198px] object-cover mb-2 rounded-full border-4 border-orange"
-                            />
-                            <span>{item.name}</span>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-            </ul>
             <ButtonWithBorder
               name="Book a table"
               link={true}
               href="/book-table"
+              className="py-1.5"
+              parentClass="w-fit ml-auto !block py-1.5"
             />
+          </div>
+        </div>
+        {isShowHeader && (
+          <div
+            className={`bg-brown min-h-[86px] transition-transform duration-300 ease-in-out ${
+              scrolled
+                ? "opacity-0 -translate-y-full"
+                : "opacity-100 -translate-y-22"
+            }`}
+          >
+            <div className="flex h-full justify-between items-center container ">
+              <Link href="/">
+                <Image
+                  src={spoonLogo}
+                  alt="spoon-logo"
+                  width={63}
+                  height={62}
+                />
+              </Link>
+              <ul
+                className={`mt-2 w-full flex justify-center p-8 text-white relative container space-x-5 lg:space-x-6 `}
+              >
+                {navLinks.map((link) => (
+                  <li key={link.id}>
+                    <div className="flex items-center gap-2 uppercase ">
+                      <MenuRectIcon />
+
+                      {link?.dropdownItems?.length > 0 ? (
+                        <button
+                          onClick={() => handleToggle(link.id)}
+                          className="cursor-pointer uppercase border-b-1 border-transparent hover:border-white hover:text-gray-300"
+                        >
+                          {link.name}
+                        </button>
+                      ) : (
+                        <Link
+                          onClick={() => handleToggle(link.id)}
+                          className="border-b-1 border-transparent hover:border-white hover:text-gray-300"
+                          href={link.href}
+                        >
+                          {link.name}
+                        </Link>
+                      )}
+                    </div>
+                    {link?.isDropdown && link?.dropdownItems?.length > 0 && (
+                      <ul className="flex gap-8 container !w-full 2xl:!w-fit left-0 top-20 rsight-0 absolute  bg-dark-brown p-4 space-y-2 rounded-md">
+                        {link.dropdownItems.map((item) => (
+                          <li key={item.id}>
+                            <Link
+                              onClick={() => handleToggle(link.id)}
+                              className="mt-4 flex flex-col items-center text-center xl:text-xl hover:text-gray-300"
+                              href={item.href}
+                            >
+                              <Image
+                                src={item.image}
+                                alt={item.name}
+                                width={198}
+                                height={198}
+                                className="md:w-[100px] md:h-[100px] lg:w-[150px] lg:h-[150px] w-[198px] h-[198px] object-cover mb-2 rounded-full border-4 border-orange"
+                              />
+                              <span>{item.name}</span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         )}
       </nav>

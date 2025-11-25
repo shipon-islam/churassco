@@ -2,8 +2,13 @@ import homeBanner from "@/assets/banners/home-banner.jpg";
 import chickenSalad from "@/assets/menu/chicken-salad.webp";
 import desserts from "@/assets/menu/desserts.webp";
 import Hero from "@/components/Hero";
-import { OrangeRectSkewIcon } from "@/components/SvgIcons";
+import {
+  LeftArrow,
+  OrangeRectSkewIcon,
+  RightArrow,
+} from "@/components/SvgIcons";
 import Image from "next/image";
+import Link from "next/link";
 export default function BreadAndDessert() {
   return (
     <main>
@@ -81,6 +86,20 @@ export default function BreadAndDessert() {
           </div>
         </div>
       </section>
+      <div className="flex items-center gap-8 justify-center mb-16">
+        <Link
+          href="/menu/salad-and-kebab"
+          className="border border-black hover:bg-black/40 rounded-full p-1.5 "
+        >
+          <LeftArrow />
+        </Link>
+        <Link
+          href="/menu/bread-and-dessert"
+          className="border border-black hover:bg-black/40 rounded-full p-1.5 hidden"
+        >
+          <RightArrow />
+        </Link>
+      </div>
     </main>
   );
 }

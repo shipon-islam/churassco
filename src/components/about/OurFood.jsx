@@ -22,7 +22,7 @@ export default function OurFood() {
             alt="img"
             width={860}
             height={485}
-            className="mt-10 w-full h-full  object-cover shadow-[0px_4px_15.3px_0px_#E8822D]"
+            className="mt-10 w-full h-full  object-cover shadow-[0px_4px_15.3px_0px_#E8822D] hover:shadow-[0px_4px_50.3px_0px_#E8822D]"
           />
         </div>
       </div>

@@ -10,7 +10,7 @@ export default function EventCard({ type }) {
         alt="curve-card"
         className={`w-full h-auto  ${
           type === "curve" ? "rounded-tl-[50%] rounded-br-[50%]" : ""
-        }`}
+        } ${type === "curve-left" ? "rounded-tr-[50%] rounded-bl-[50%]" : ""}`}
       />
       <div className="text-center mt-4">
         <h4 className="text-2xl font-bernier lowercase">COCKTAILS NIGHT</h4>

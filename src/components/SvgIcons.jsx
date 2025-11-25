@@ -117,3 +117,62 @@ export const OrangeRectSkewIcon = ({ className }) => (
     </defs>
   </svg>
 );
+export const RightArrow = ({ className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className={`size-6 ${className}`}
+  >
+    <path
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="m21 12l-5-5m5 5l-5 5m5-5H3"
+    ></path>
+  </svg>
+);
+export const LeftArrow = ({ className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 20 20"
+    className={`size-6 ${className}`}
+  >
+    <path
+      fill="currentColor"
+      fillRule="evenodd"
+      d="M7.707 14.707a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 1.414L5.414 9H17a1 1 0 1 1 0 2H5.414l2.293 2.293a1 1 0 0 1 0 1.414"
+      clipRule="evenodd"
+    ></path>
+  </svg>
+);
+export const PlayIcon = ({ className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className={`size-6 ${className}`}
+    viewBox="0 0 24 24"
+  >
+    <path
+      fill="none"
+      stroke="currentColor"
+      strokeLinejoin="round"
+      strokeWidth={2.5}
+      d="M19 10.268c1.333.77 1.333 2.694 0 3.464l-9 5.196c-1.333.77-3-.192-3-1.732V6.804c0-1.54 1.667-2.502 3-1.732z"
+    ></path>
+  </svg>
+);
+export const PauseIcon = ({ className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className={`size-6 ${className}`}
+    viewBox="0 0 24 24"
+  >
+    <path
+      fill="currentColor"
+      fillRule="evenodd"
+      d="M8 5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm7 0a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"
+      clipRule="evenodd"
+    ></path>
+  </svg>
+);

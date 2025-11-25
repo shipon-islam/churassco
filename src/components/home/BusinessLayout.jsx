@@ -3,7 +3,7 @@ import chickenRice from "@/assets/cards/chicken-rice.webp";
 import menuList from "@/assets/cards/menu-list.webp";
 import Image from "next/image";
 import "swiper/css/pagination";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import TransparentButton from "../TransparentButton";
 const businessApi = [
@@ -63,7 +63,7 @@ export default function BusinessLayout() {
               }}
               // onSlideChange={() => console.log("slide change")}
               // onSwiper={(swiper) => console.log(swiper)}
-              modules={[Autoplay, Pagination]}
+              modules={[Pagination]}
             >
               {businessItem.images?.map((item, index) => {
                 return (

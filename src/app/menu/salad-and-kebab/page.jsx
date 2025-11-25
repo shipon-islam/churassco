@@ -6,8 +6,13 @@ import friedStuff from "@/assets/menu/fried-stuff.webp";
 import nakhshi from "@/assets/png/nakhshi.png";
 import Hero from "@/components/Hero";
 import StyledBorder from "@/components/StyledBorder";
-import { OrangeRectSkewIcon } from "@/components/SvgIcons";
+import {
+  LeftArrow,
+  OrangeRectSkewIcon,
+  RightArrow,
+} from "@/components/SvgIcons";
 import Image from "next/image";
+import Link from "next/link";
 function SaladAndKabab() {
   return (
     <main>
@@ -58,7 +63,7 @@ function SaladAndKabab() {
               width={500}
               height={700}
               alt="product"
-              className="border-4 border-orange object-cover mx-auto md:mx-0 md:ml-auto rounded-t-full p-1 w-[80%] sm:w-[500px] md:h-[500px] lg:h-[680px]"
+              className="border-4 border-orange object-cover mx-auto md:mx-0 md:ml-auto rounded-t-full p-1 w-[80%] sm:w-[500px] md:h-[600px] lg:h-[680px]"
             />
           </div>
         </div>
@@ -69,7 +74,7 @@ function SaladAndKabab() {
               width={500}
               height={700}
               alt="product"
-              className="border-4 border-orange object-cover mx-auto md:mx-0 md:mr-auto md:rounded-tr-[50%] p-1 w-[80%] sm:w-[500px] md:h-[500px] lg:h-[680px]"
+              className="border-4 border-orange object-cover mx-auto md:mx-0 md:mr-auto md:rounded-tr-[50%] p-1 w-[80%] sm:w-[500px] md:h-[600px] lg:h-[680px]"
             />
           </div>
           <div>
@@ -124,7 +129,7 @@ function SaladAndKabab() {
               width={500}
               height={700}
               alt="product"
-              className="border-4 border-orange object-cover mx-auto md:mx-0 md:ml-auto  md:rounded-full p-1 w-[80%] sm:w-[500px] md:h-[500px] lg:h-[680px]"
+              className="border-4 border-orange object-cover mx-auto md:mx-0 md:ml-auto  md:rounded-full p-1 w-[80%] sm:w-[500px] md:h-[600px] lg:h-[680px]"
             />
           </div>
         </div>
@@ -138,7 +143,7 @@ function SaladAndKabab() {
               width={500}
               height={700}
               alt="product"
-              className="border-4 border-orange object-cover mx-auto md:mx-0 md:mr-auto md:rounded-br-[50%] p-1 w-[80%] sm:w-[500px] md:h-[500px] lg:h-[680px]"
+              className="border-4 border-orange object-cover mx-auto md:mx-0 md:mr-auto md:rounded-br-[50%] p-1 w-[80%] sm:w-[500px] md:h-[600px] lg:h-[680px]"
             />
           </div>
           <div>
@@ -194,11 +199,25 @@ function SaladAndKabab() {
               width={500}
               height={700}
               alt="product"
-              className="border-4 border-orange object-cover mx-auto md:ml-auto rounded-b-full md:rounded-full p-1 w-[80%] sm:w-[500px] md:h-[500px] lg:h-[680px]"
+              className="border-4 border-orange object-cover mx-auto md:ml-auto rounded-b-full md:rounded-full p-1 w-[80%] sm:w-[500px] md:h-[600px] lg:h-[680px]"
             />
           </div>
         </div>
       </section>
+      <div className="flex items-center gap-8 justify-center mb-16">
+        <Link
+          href="/menu/salad-and-kebab"
+          className="border border-black hover:bg-black/40 rounded-full p-1.5 "
+        >
+          <LeftArrow />
+        </Link>
+        <Link
+          href="/menu/bread-and-dessert"
+          className="border border-black hover:bg-black/40 rounded-full p-1.5 "
+        >
+          <RightArrow />
+        </Link>
+      </div>
     </main>
   );
 }

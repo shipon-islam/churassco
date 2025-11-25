@@ -1,9 +1,14 @@
 import homeBanner from "@/assets/banners/home-banner.jpg";
 import coldTea from "@/assets/menu/cold-tea.webp";
-import hotTea from "@/assets/menu/hot-tea.webp";
+import hotTea from "@/assets/menu/milk-tea.webp";
 import Hero from "@/components/Hero";
-import { OrangeRectSkewIcon } from "@/components/SvgIcons";
+import {
+  LeftArrow,
+  OrangeRectSkewIcon,
+  RightArrow,
+} from "@/components/SvgIcons";
 import Image from "next/image";
+import Link from "next/link";
 export default function Beverages() {
   return (
     <main>
@@ -48,7 +53,7 @@ export default function Beverages() {
               width={500}
               height={700}
               alt="product"
-              className="border-4 border-orange object-cover mx-auto md:mx-0 md:ml-auto rounded-t-full p-1 w-[80%] sm:w-[500px]"
+              className="border-4 border-orange object-cover mx-auto md:mx-0 md:ml-auto rounded-t-full p-1 w-[80%] sm:w-[500px] md:h-[600px] lg:h-[680px]"
             />
           </div>
         </div>
@@ -59,7 +64,7 @@ export default function Beverages() {
               width={500}
               height={700}
               alt="product"
-              className="border-4 border-orange object-cover mx-auto md:ml-auto rounded-tr-[40%]  p-1 w-[80%] sm:w-[500px] h-auto md:min-h-[550px] lg:min-h-[631px]"
+              className="border-4 border-orange object-cover mx-auto md:ml-auto rounded-tr-[40%]  p-1 w-[80%] sm:w-[500px] h-auto md:h-[600px] lg:h-[680px]"
             />
           </div>
           <div className="order-2 md:order-2">
@@ -79,6 +84,20 @@ export default function Beverages() {
           </div>
         </div>
       </section>
+      <div className="flex items-center gap-8 justify-center mb-16">
+        <Link
+          href="/menu/beverages"
+          className="border border-black hover:bg-black/40 rounded-full p-1.5 hidden"
+        >
+          <LeftArrow />
+        </Link>
+        <Link
+          href="/menu/noodlles-and-pasta"
+          className="border border-black hover:bg-black/40 rounded-full p-1.5"
+        >
+          <RightArrow />
+        </Link>
+      </div>
     </main>
   );
 }
