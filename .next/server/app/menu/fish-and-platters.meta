@@ -3,5 +3,14 @@
     "x-nextjs-stale-time": "300",
     "x-nextjs-prerender": "1",
     "x-next-cache-tags": "_N_T_/layout,_N_T_/menu/layout,_N_T_/menu/fish-and-platters/layout,_N_T_/menu/fish-and-platters/page,_N_T_/menu/fish-and-platters"
-  }
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/menu/fish-and-platters/__PAGE__",
+    "/menu/fish-and-platters",
+    "/menu",
+    "/_index",
+    "/_head"
+  ]
 }

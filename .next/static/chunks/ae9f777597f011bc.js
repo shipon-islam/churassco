@@ -1,1 +1,0 @@
-(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,66995,e=>{e.v("/_next/static/media/paper-craft.128e8d6c.webp")}]);

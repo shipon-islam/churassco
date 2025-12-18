@@ -3,5 +3,14 @@
     "x-nextjs-stale-time": "300",
     "x-nextjs-prerender": "1",
     "x-next-cache-tags": "_N_T_/layout,_N_T_/menu/layout,_N_T_/menu/beverages/layout,_N_T_/menu/beverages/page,_N_T_/menu/beverages"
-  }
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/menu/beverages/__PAGE__",
+    "/menu/beverages",
+    "/menu",
+    "/_index",
+    "/_head"
+  ]
 }
